@@ -1,0 +1,13 @@
+version: '3.6'
+services:
+  back_end:
+    container_name: nginx
+    image: nginx
+    ports:
+      - 80:80
+    volumes: 
+     - $HOME/nginx/default.conf:/etc/nginx/conf.d/default.conf
+     - $HOME/nginx/html:/data/html
+     - $HOME/nginx/pdf:/data/pdf
+     - $HOME/nginx/images:/data/images
+    
